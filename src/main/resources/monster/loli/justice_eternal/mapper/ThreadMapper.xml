@@ -113,7 +113,7 @@
       AND t.id  = #{id}
     </if>
     <if test="title != null and title != ''">
-      AND t.title  = #{title}
+      AND t.title like CONCAT('%',#{title},'%')
     </if>
     <if test="author != null and author != ''">
       AND t.author  = #{author}

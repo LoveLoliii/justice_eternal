@@ -29,6 +29,7 @@ public class ThreadServiceImpl implements ThreadService {
         paramMap.put("id", threadVO.getId());
         paramMap.put("type", threadVO.getTitle());
         paramMap.put("author", threadVO.getAuthor());
+        paramMap.put("title", threadVO.getTitle());
         paramMap.put("sort", "createTime");
         paramMap.put("sequence", "DESC");
 
