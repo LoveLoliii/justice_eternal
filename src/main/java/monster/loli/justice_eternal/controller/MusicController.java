@@ -46,7 +46,7 @@ public class MusicController {
     @GetMapping(path = "getPostList")
     public LinkedHashMap<String,Object> getPostList(PostVO postVO){
         LinkedHashMap<String,Object> returnData = new LinkedHashMap<>();
-        Map<String, Object> list =  threadService.queryThread(threadVO);
+        Map<String, Object> list =  postService.queryPost(postVO);
         returnData.put("data",list);
         returnData.put("status","success");
         return returnData;
