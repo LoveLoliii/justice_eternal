@@ -141,5 +141,8 @@
     <if test="author != null and author != ''">
       AND t.author  = #{author}
     </if>
+    <if test="thread_id != null and thread_id != ''">
+      AND t.thread_id  = #{thread_id}
+    </if>
   </sql>
 </mapper>

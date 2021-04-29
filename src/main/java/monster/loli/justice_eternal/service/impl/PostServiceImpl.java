@@ -24,6 +24,7 @@ public class PostServiceImpl implements PostService {
         Map<String, Object> paramMap = new HashMap<>();
         
         paramMap.put("id", postVO.getId());
+        paramMap.put("thread_id", postVO.getThread_id());
         paramMap.put("content", postVO.getContent());
         paramMap.put("author", postVO.getAuthor());
         paramMap.put("sort", "createTime");

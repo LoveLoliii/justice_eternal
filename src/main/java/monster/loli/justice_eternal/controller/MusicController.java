@@ -6,8 +6,8 @@ import monster.loli.justice_eternal.service.PostService;
 import monster.loli.justice_eternal.service.ThreadService;
 import monster.loli.justice_eternal.vo.PostVO;
 import monster.loli.justice_eternal.vo.ThreadVO;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -33,7 +33,7 @@ public class MusicController {
 
     @ApiOperation(value = "获取thread列表")
     @GetMapping(path = "getThreadList")
-    public LinkedHashMap<String,Object> getThreadList(ThreadVO threadVO){
+    public LinkedHashMap<String,Object> getThreadList( ThreadVO threadVO){
         LinkedHashMap<String,Object> returnData = new LinkedHashMap<>();
         Map<String, Object> list =  threadService.queryThread(threadVO);
         returnData.put("data",list);
